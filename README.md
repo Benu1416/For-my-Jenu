@@ -1,1 +1,751 @@
-# For-my-Jenu
+[for_jenu.html](https://github.com/user-attachments/files/28838199/for_jenu.html)
+# For-my-Jenu<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Jenu ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a0a0a 0%, #2d0a0a 50%, #1a0a0a 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #fff;
+        }
+
+        /* Floating hearts background */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: floatUp 8s infinite ease-in-out;
+            opacity: 0.3;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Horse silhouettes */
+        .horse-silhouette {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.15;
+            animation: gallop 15s infinite linear;
+        }
+
+        @keyframes gallop {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(calc(100vw + 100px)); }
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #ff6b6b;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffb3b3;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Pet names ticker */
+        .pet-names-section {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .pet-names-section h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff6b6b;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .pet-name-display {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #ffd1d1;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+        }
+
+        .pet-name-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .pet-name-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Motivation cards */
+        .motivation-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .motivation-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 107, 107, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .motivation-card:nth-child(1) { animation-delay: 0.3s; }
+        .motivation-card:nth-child(2) { animation-delay: 0.5s; }
+        .motivation-card:nth-child(3) { animation-delay: 0.7s; }
+
+        .motivation-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 107, 0.6);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .motivation-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .motivation-card h3 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff6b6b;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .motivation-card p {
+            color: #ffb3b3;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 107, 107, 0.15);
+            border-radius: 15px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: #ffd1d1;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .hidden-message.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Special message section */
+        .special-message {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(200, 50, 50, 0.1));
+            border: 2px solid rgba(255, 107, 107, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .special-message::before {
+            content: '🐴';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .special-message h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .special-message .message-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            color: #ffd1d1;
+            line-height: 2;
+        }
+
+        .special-message .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            animation: fadeInUp 1s ease-out 1.1s both;
+        }
+
+        .quiz-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .quiz-section .quiz-subtitle {
+            color: #ffb3b3;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .quiz-question {
+            font-size: 1.3rem;
+            color: #ffd1d1;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .quiz-option {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            padding: 15px 20px;
+            color: #ffb3b3;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 107, 107, 0.25);
+            transform: scale(1.05);
+            border-color: #ff6b6b;
+        }
+
+        .quiz-option.correct {
+            background: rgba(76, 175, 80, 0.3) !important;
+            border-color: #4caf50 !important;
+            color: #a5d6a7 !important;
+            animation: pulse 0.5s ease;
+        }
+
+        .quiz-option.wrong {
+            background: rgba(244, 67, 54, 0.3) !important;
+            border-color: #f44336 !important;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .quiz-result {
+            margin-top: 25px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffd1d1;
+            min-height: 40px;
+            display: none;
+        }
+
+        .quiz-result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Progress tracker */
+        .progress-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            animation: fadeInUp 1s ease-out 1.3s both;
+        }
+
+        .progress-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .study-sessions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .session-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .session-circle:hover {
+            transform: scale(1.1);
+            border-color: #ff6b6b;
+        }
+
+        .session-circle.completed {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            border-color: #ff6b6b;
+            box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+            animation: popIn 0.3s ease;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .progress-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            color: #ffb3b3;
+            margin-top: 15px;
+        }
+
+        /* Love note section */
+        .love-note {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(150, 30, 30, 0.1));
+            border: 2px solid rgba(255, 107, 107, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 1s ease-out 1.5s both;
+        }
+
+        .love-note h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .love-note-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            color: #ffd1d1;
+            line-height: 2.2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .love-note .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease-out 1.7s both;
+        }
+
+        .footer .heart-beat {
+            font-size: 3rem;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .footer p {
+            font-family: 'Dancing Script', cursive;
+            color: #ffb3b3;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Sparkle effect */
+        .sparkle {
+            position: absolute;
+            pointer-events: none;
+            animation: sparkleAnim 1s forwards;
+        }
+
+        @keyframes sparkleAnim {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1.5) rotate(180deg); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2.5rem; }
+            .quiz-options { grid-template-columns: 1fr; }
+            .special-message, .love-note, .quiz-section, .progress-section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>For My Thangamey ❤️</h1>
+            <p class="subtitle">A little corner of love & motivation for my Jenu Kutty</p>
+        </div>
+
+        <!-- Pet Names Section -->
+        <div class="pet-names-section">
+            <h2>🐴 Click to See Your Pet Names 🐴</h2>
+            <div class="pet-name-display" id="petNameDisplay">✨ My Jenu ✨</div>
+            <button class="pet-name-btn" onclick="showNextPetName()">Next Pet Name 💕</button>
+        </div>
+
+        <!-- Motivation Cards -->
+        <div class="motivation-section">
+            <div class="motivation-card" onclick="toggleMessage(this)">
+                <span class="icon">📚</span>
+                <h3>Study Time!</h3>
+                <p>Click me for a surprise message</p>
+                <div class="hidden-message">
+                    "Jenu, every page you turn brings you closer to your dreams. I'm right here cheering for you! 📖✨"
+                </div>
+            </div>
+
+            <div class="motivation-card" onclick="toggleMessage(this)">
+                <span class="icon">🐴</span>
+                <h3>Run Like a Horse!</h3>
+                <p>Click me for a surprise message</p>
+                <div class="hidden-message">
+                    "My strong horse, gallop through those books like you own the field! Nothing can stop my Jenu! 🐎💨"
+                </div>
+            </div>
+
+            <div class="motivation-card" onclick="toggleMessage(this)">
+                <span class="icon">⏰</span>
+                <h3>It's Just Matter of Time</h3>
+                <p>Click me for a surprise message</p>
+                <div class="hidden-message">
+                    "Thanga pattani, remember - it's just a matter of time. Your hard work will bloom into something beautiful. Patience, my love! 🌸"
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Message -->
+        <div class="special-message">
+            <h2>My Message to You</h2>
+            <div class="message-text">
+                <p>My <span class="highlight">Jenu</span>,</p>
+                <p>I am always <span class="highlight">proud</span> of you.</p>
+                <p>You are so <span class="highlight">precious</span> and the <span class="highlight">cutie</span> of mine.</p>
+                <p>Remember - <span class="highlight">it's just a matter of time</span>.</p>
+                <p>Your Abi believes in you more than anything! 🐴❤️</p>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-section">
+            <h2>💕 Abi's Little Quiz 💕</h2>
+            <p class="quiz-subtitle">Let's see how well you know your girl!</p>
+
+            <div id="quizContainer">
+                <div class="quiz-question">Who does Abi like a lot? 🤔</div>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="checkAnswer(this, 'wrong')">Jena</button>
+                    <button class="quiz-option" onclick="checkAnswer(this, 'correct')">Jenu</button>
+                    <button class="quiz-option" onclick="checkAnswer(this, 'wrong')">Jebi</button>
+                    <button class="quiz-option" onclick="checkAnswer(this, 'wrong')">Benu</button>
+                </div>
+                <div class="quiz-result" id="quizResult"></div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress-section">
+            <h2>🌟 Study Session Tracker 🌟</h2>
+            <p style="color: #ffb3b3; margin-bottom: 15px;">Click the circles to mark your study sessions!</p>
+            <div class="study-sessions" id="studySessions">
+                <div class="session-circle" onclick="toggleSession(this)">📖</div>
+                <div class="session-circle" onclick="toggleSession(this)">📖</div>
+                <div class="session-circle" onclick="toggleSession(this)">📖</div>
+                <div class="session-circle" onclick="toggleSession(this)">📖</div>
+                <div class="session-circle" onclick="toggleSession(this)">📖</div>
+            </div>
+            <div class="progress-text" id="progressText">Start your first session, my Jenu! 🐴</div>
+        </div>
+
+        <!-- Love Note -->
+        <div class="love-note">
+            <h2>A Love Note 💌</h2>
+            <div class="love-note-content">
+                <p>My Azhguu,</p>
+                <p>Every time you pick up your books, know that I'm sending you all my love and strength.</p>
+                <p>You are my En kadala mittai, my En pori uruinda, my everything.</p>
+                <p>Study hard, my Raasa kutty, but don't forget to take breaks and know that your Abi is always thinking of you.</p>
+                <p>Forever yours,</p>
+            </div>
+            <div class="signature">Your Abi ❤️</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="heart-beat">❤️</div>
+            <p>Made with endless love for my Jenu Kutty</p>
+            <p style="font-size: 1rem; margin-top: 5px;">🐴 You are my favorite human 🐴</p>
+        </div>
+    </div>
+
+    <script>
+        // Pet Names Array
+        const petNames = [
+            "Thangamey", "Azhguu", "Thanga pattani", "En kadala mittai", 
+            "En pori uruinda", "En anbey", "En uyriae", "Chella kutty",
+            "Thanga pilla", "Azhgu kutty", "Raasa kutty", "En kannu",
+            "En kannaa", "Amulu kutty", "Petharu kutty", "Meenu kutty",
+            "Meowmi kutty", "En jeju azhgiii", "En kannu azhgu", "Jelo ma",
+            "Jenumi", "Jeelomeyy", "Jenu papa", "Jebi", "Jeeeee",
+            "Mine", "En surutta mandaa", "Kobi"
+        ];
+
+        let currentPetIndex = 0;
+
+        function showNextPetName() {
+            const display = document.getElementById('petNameDisplay');
+            display.style.opacity = '0';
+            display.style.transform = 'scale(0.8)';
+
+            setTimeout(() => {
+                currentPetIndex = (currentPetIndex + 1) % petNames.length;
+                display.textContent = `✨ ${petNames[currentPetIndex]} ✨`;
+                display.style.opacity = '1';
+                display.style.transform = 'scale(1)';
+                createSparkles(event.clientX, event.clientY);
+            }, 200);
+        }
+
+        // Toggle hidden messages
+        function toggleMessage(card) {
+            const message = card.querySelector('.hidden-message');
+            message.classList.toggle('show');
+            if (message.classList.contains('show')) {
+                createSparkles(event.clientX, event.clientY);
+            }
+        }
+
+        // Quiz functionality
+        function checkAnswer(button, result) {
+            const allOptions = document.querySelectorAll('.quiz-option');
+            const resultDiv = document.getElementById('quizResult');
+
+            allOptions.forEach(opt => {
+                opt.disabled = true;
+                opt.style.cursor = 'default';
+            });
+
+            if (result === 'correct') {
+                button.classList.add('correct');
+                resultDiv.innerHTML = '🎉 Correct! Abi loves Jenu the most! ❤️🐴 You know your girl so well, my Thanga pilla!';
+                resultDiv.style.color = '#a5d6a7';
+                createSparkles(event.clientX, event.clientY);
+            } else {
+                button.classList.add('wrong');
+                // Highlight correct answer
+                allOptions[1].classList.add('correct');
+                resultDiv.innerHTML = '💕 Aww, try again! But you know Abi only has eyes for her Jenu! 🐴❤️';
+                resultDiv.style.color = '#ffb3b3';
+            }
+
+            resultDiv.classList.add('show');
+        }
+
+        // Study session tracker
+        function toggleSession(circle) {
+            circle.classList.toggle('completed');
+            updateProgressText();
+            createSparkles(event.clientX, event.clientY);
+        }
+
+        function updateProgressText() {
+            const completed = document.querySelectorAll('.session-circle.completed').length;
+            const total = document.querySelectorAll('.session-circle').length;
+            const text = document.getElementById('progressText');
+
+            const messages = [
+                "Start your first session, my Jenu! 🐴",
+                "Great start, my Azhguu! Keep going! 📚",
+                "Halfway there, my Thanga pattani! So proud! 🌟",
+                "Almost done, my En anbey! You're amazing! 💪",
+                "One more to go, my Raasa kutty! 🎯",
+                "WOW! All sessions done! My Jenu is a superstar! 🌟🐴❤️"
+            ];
+
+            text.textContent = messages[completed];
+        }
+
+        // Create floating hearts
+        function createHearts() {
+            const container = document.getElementById('heartsContainer');
+            const hearts = ['❤️', '💖', '💕', '💗', '💓', '💝'];
+
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 8 + 's';
+                heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                container.appendChild(heart);
+            }
+        }
+
+        // Create sparkle effect
+        function createSparkles(x, y) {
+            const colors = ['#ff6b6b', '#ffb3b3', '#ffd1d1', '#ff8e8e', '#ffffff'];
+            for (let i = 0; i < 8; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.textContent = '✨';
+                sparkle.style.left = (x + Math.random() * 40 - 20) + 'px';
+                sparkle.style.top = (y + Math.random() * 40 - 20) + 'px';
+                sparkle.style.color = colors[Math.floor(Math.random() * colors.length)];
+                sparkle.style.fontSize = (Math.random() * 10 + 15) + 'px';
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+
+        // Initialize
+        createHearts();
+
+        // Add click sparkles anywhere
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') {
+                createSparkles(e.clientX, e.clientY);
+            }
+        });
+    </script>
+</body>
+</html>
